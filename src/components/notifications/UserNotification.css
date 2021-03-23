@@ -1,0 +1,10 @@
+.user-notification-list{
+    width: 300px;
+    max-height:350px;
+    overflow-y: scroll;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 100000;
+    background: #fff;
+}
