@@ -1,4 +1,4 @@
-const DropdwonMenus = [
+export const DropdwonMenus = [
     {
         name: 'Home',
         iconClass: 'dw-house-1',
@@ -107,5 +107,3 @@ const DropdwonMenus = [
             }]
     },
 ];
-
-export default DropdwonMenus;

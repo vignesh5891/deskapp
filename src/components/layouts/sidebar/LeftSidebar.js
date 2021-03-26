@@ -1,6 +1,6 @@
 import React from 'react';
 import Dropdown from '../../ui/Dropdown';
-import DropdwonMenus from '../../../static-data/DropdownMenus';
+import { DropdwonMenus } from '../../../static-data/DropdownMenus';
 
 class LeftSidebar extends React.Component {
     render() {

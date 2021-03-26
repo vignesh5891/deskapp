@@ -4,7 +4,7 @@ import ActivityChart from '../charts/ActivityChart';
 import TargetChart from '../charts/TargetChart';
 import DataTable from '../ui/dataTable/DataTable';
 import Footer from './Footer';
-import listData from '../../static-data/ProductData';
+import { listData } from '../../static-data/ProductData';
 
 const specialObjs = {
     Product: { type: 'img', maxWidth: '50px' },

@@ -1,4 +1,4 @@
-const listData = [
+export const listData = [
     {
         Product: 'assets/images/product-1.jpg',
         Name: 'Shirt',
@@ -80,5 +80,3 @@ const listData = [
         exp: '123'
     }
 ];
-
-export default listData;
