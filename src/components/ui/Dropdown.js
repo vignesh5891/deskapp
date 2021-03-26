@@ -1,22 +1,28 @@
 import React from 'react';
-
-import './Dropdown.css';
+import { connect } from 'react-redux';
+import shortid from 'shortid';
+import { addDropDwonClass, removeDropDwonClass } from '../../actions/Dropdown';
+import './Dropdown.css';;
 
 class Dropdown extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { ddlClass: '' };
+
         this.toggleDropdown = this.toggleDropdown.bind(this);
 
         this.wrapperRef = React.createRef();
         this.handleClickOutside = this.handleClickOutside.bind(this);
+        this.ddlParam = [];
+        this.uid = shortid.generate();
     }
 
     toggleDropdown() {
-        if (this.state.ddlClass == this.props.ddlClass) {
-            this.setState({ ddlClass: '' });
+        if (this.props.ddlClassName === this.props.ddlClass) {
+            this.ddlParam[this.uid] = '';
+            this.props.hideDropDown(this.ddlParam)
         } else {
-            this.setState(state => ({ ddlClass: this.props.ddlClass }));
+            this.ddlParam[this.uid] = this.props.ddlClass;
+            this.props.showDropDown(this.ddlParam)
         }
     }
 
@@ -29,8 +35,9 @@ class Dropdown extends React.Component {
     }
 
     handleClickOutside(event) {
-        if (this.wrapperRef && !this.wrapperRef.current.contains(event.target) && this.props.onOutsideClick == 'hide') {
-            this.setState(state => ({ ddlClass: '' }));
+        if (this.wrapperRef && !this.wrapperRef.current.contains(event.target) && this.props.onOutsideClick === 'hide') {
+            this.ddlParam[this.uid] = '';
+            this.props.hideDropDown(this.ddlParam)
         }
     }
 
@@ -38,8 +45,8 @@ class Dropdown extends React.Component {
         return (
             <div>
                 <a href="#" onClick={this.toggleDropdown}>{this.props.anchorContent}</a>
-                <div ref={this.wrapperRef} className={this.state.ddlClass}>
-                    {this.state.ddlClass ? this.props.dropdownContent : ''}
+                <div ref={this.wrapperRef} data-uid={this.uid} className={this.props.ddlClassName && this.props.ddlClassName[this.uid] ? this.props.ddlClassName[this.uid] : ''}>
+                    {this.props.ddlClassName && this.props.ddlClassName[this.uid] ? this.props.dropdownContent : ''}
                 </div>
             </div>
         );
@@ -47,5 +54,19 @@ class Dropdown extends React.Component {
 
 }
 
-export default Dropdown;
+const mapStateToProps = state => {
+    return { ddlClassName: state.dropDown.dropDownClass };
+};
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        showDropDown: (payload) => dispatch(addDropDwonClass(payload)),
+        hideDropDown: (payload) => dispatch(removeDropDwonClass(payload)),
+    };
+}
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(Dropdown);
 

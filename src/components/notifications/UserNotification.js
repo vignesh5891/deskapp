@@ -2,41 +2,51 @@ import React from 'react';
 import Dropdown from '../ui/Dropdown';
 import UserNotificationItem from './UserNotificationItem';
 import './UserNotification.css';
+import { UserNotifications } from '../../static-data/UserNotifications';
 
-function UserNotification() {
+export default class UserNotification extends React.Component {
+    constructor(props) {
+        super(props)
+        this.anchorContent = this.anchorContent.bind(this)
+        this.dropdownContent = this.dropdownContent.bind(this)
+    }
 
-    return (
-        <div className="user-notification">
-            <Dropdown
-                ddlClass='show-overlap'
-                onOutsideClick="hide"
-                anchorContent={<span><i className="icon-copy dw dw-notification"></i><span className="badge notification-active"></span></span>}
-                dropdownContent={
-                    <div className="user-notification-list">
-                        <ul>
-                            <UserNotificationItem
-                                image="assets/images/img.jpg"
-                                title="John Doe"
-                                description="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed..."
-                            />
-                            <UserNotificationItem
-                                image="assets/images/photo1.jpg"
-                                title="Erik L. Richards"
-                                description="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed..."
-                            />
-                            <UserNotificationItem
-                                image="assets/images/photo2.jpg"
-                                title="Lea R. Frith"
-                                description="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed..."
-                            />
-                        </ul>
-                    </div>
-                }
-            />
+    anchorContent() {
+        return (
+            <span><i className="icon-copy dw dw-notification"></i><span className="badge notification-active"></span></span>
+        )
+    }
 
-        </div>
-    );
+    dropdownContent() {
+        return (
+            <div className="user-notification-list">
+                <ul>
+                    {
+                        UserNotifications.map((notification, index) => {
+                            return <UserNotificationItem
+                                key={index}
+                                image={notification.image}
+                                title={notification.title}
+                                description={notification.description}
+                            />
+                        })
+                    }
+                </ul>
+            </div>
+        )
+    }
+
+    render() {
+        return (
+            <div className="user-notification">
+                <Dropdown
+                    ddlClass='show-overlap'
+                    onOutsideClick="hide"
+                    anchorContent={this.anchorContent()}
+                    dropdownContent={this.dropdownContent()}
+                />
+            </div>
+        );
+    }
 }
 
-
-export default UserNotification;

@@ -10,13 +10,15 @@ function DataTableRows(props) {
                         switch (specialObj.type) {
                             case 'img':
                                 return (<td key={i}>
-                                    <img src={rw[key]} style={{ maxWidth: specialObj.maxWidth }} />
+                                    <img src={rw[key]} style={{ maxWidth: specialObj.maxWidth }} alt='' />
                                 </td>);
                             case 'button':
                                 return (<td key={i}>
                                     <button className={'btn ' + specialObj.className}>{specialObj.buttonText}</button>
                                 </td>)
                             case 'exclude':
+                                return ''
+                            default:
                                 return ''
                         }
                     }

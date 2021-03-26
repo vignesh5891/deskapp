@@ -1,6 +1,6 @@
 import React from 'react';
-import Dropdown from '../../components/ui/Dropdown';
-import DropdwonMenus from '../../components/DropdownMenus';
+import Dropdown from '../../ui/Dropdown';
+import DropdwonMenus from '../../../static-data/DropdownMenus';
 
 class LeftSidebar extends React.Component {
     render() {
@@ -22,9 +22,8 @@ class LeftSidebar extends React.Component {
                         <ul id="accordion-menu">
                             {
                                 DropdwonMenus.map((menu, index) => {
-                                    return <li className="dropdown">
+                                    return <li className="dropdown" key={index}>
                                         <Dropdown
-                                            key={index}
                                             ddlClass='submenu'
                                             anchorContent={<a href="#" className={menu.subMenus.length ? "dropdown-toggle " : "dropdown-toggle no-arrow"}>
                                                 <span className={"micon dw " + menu.iconClass}></span><span className="mtext">{menu.name}</span>

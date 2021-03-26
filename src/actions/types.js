@@ -1,0 +1,3 @@
+export const DDL_ADD_CLASS = 'DDL_ADD_CLASS';
+export const DDL_REMOVE_CLASS = 'DDL_REMOVE_CLASS';
+export const TOGGLE_LEFT_BAR = 'TOGGLE_LEFT_BAR';

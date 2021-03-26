@@ -1,4 +1,4 @@
-function RightSidebar() {
+export default function RightSidebar() {
     return (
         <div className="right-sidebar">
             <div className="sidebar-title">
@@ -76,5 +76,3 @@ function RightSidebar() {
         </div>
     );
 }
-
-export default RightSidebar;

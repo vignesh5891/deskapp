@@ -6,11 +6,9 @@ class DataTable extends React.Component {
     constructor(props) {
         super(props);
 
-        const listData = (this.props.listData) ? this.props.listData : [];
-        const specialObjs = (this.props.specialObjs) ? this.props.specialObjs : [];
-        const tableHeadings = (listData.length) ? Object.keys(listData[0]) : [];
-
-        this.state = { listData: listData, tableHeadings: tableHeadings, specialObjs: specialObjs }
+        this.listData = (this.props.listData) ? this.props.listData : [];
+        this.specialObjs = (this.props.specialObjs) ? this.props.specialObjs : [];
+        this.tableHeadings = (this.listData.length) ? Object.keys(this.listData[0]) : [];
     }
 
     render() {
@@ -19,15 +17,15 @@ class DataTable extends React.Component {
                 <thead>
                     <tr>
                         <DataTableHead
-                            DataHeadings={this.state.tableHeadings}
-                            specialObjs={this.state.specialObjs}
+                            DataHeadings={this.tableHeadings}
+                            specialObjs={this.specialObjs}
                         />
                     </tr>
                 </thead>
                 <tbody>
                     <DataTableRows
-                        dataRows={this.state.listData}
-                        specialObjs={this.state.specialObjs}
+                        dataRows={this.listData}
+                        specialObjs={this.specialObjs}
                     />
                 </tbody>
             </table>

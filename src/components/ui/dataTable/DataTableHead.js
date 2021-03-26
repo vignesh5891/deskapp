@@ -4,7 +4,7 @@ export default function DataTableHead(props) {
     return props.DataHeadings.map((value, label) => {
         if (Object.keys(props.specialObjs).includes(value)) {
             let specialObj = props.specialObjs[value];
-            if (specialObj.type == 'exclude') {
+            if (specialObj.type === 'exclude') {
                 return '';
             }
         }
