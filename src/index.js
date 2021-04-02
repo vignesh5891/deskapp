@@ -11,12 +11,15 @@ import reducers from './reducers';
 import './assets/styles/core.css';
 import './assets/styles/style.css';
 import './assets/styles/icon-font.min.css';
+import { BrowserRouter } from 'react-router-dom';
 
 const store = createStore(reducers);
 
 ReactDOM.render(
   <Provider store={store}>
-    <App layout="LayoutOne" />
+    <BrowserRouter>
+      <App layout="LayoutOne" />
+    </BrowserRouter>
   </Provider>,
   document.getElementById('root')
 );

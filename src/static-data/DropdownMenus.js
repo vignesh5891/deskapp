@@ -1,45 +1,38 @@
 export const DropdwonMenus = [
     {
-        name: 'Home',
+        name: 'Dashboard',
         iconClass: 'dw-house-1',
-        subMenus: [
-            {
-                name: 'Dashboard style 1',
-                link: 'index.html'
-            }, {
-                name: 'Dashboard style 2',
-                link: 'index2.html'
-            }, {
-                name: 'Dashboard style 3',
-                link: 'index3.html'
-            }]
+        link: '/',
+        subMenus: []
     },
     {
-        name: 'Forms',
+        name: 'Form',
         iconClass: 'dw-edit2',
+        link: 'basic-form',
         subMenus: [
-            {
-                name: 'Form Basic',
-                link: 'form-basic.html'
-            }, {
-                name: 'Advanced Components',
-                link: 'advanced-components.html'
-            }, {
-                name: 'Form Wizard',
-                link: 'form-wizard.html'
-            }, {
-                name: 'HTML5 Editor',
-                link: 'html5-editor.html'
-            }, {
-                name: 'Form Pickers',
-                link: 'form-pickers.html'
-            }, {
-                name: 'Image Cropper',
-                link: 'image-cropper.html'
-            }, {
-                name: 'Image Dropzone',
-                link: 'image-dropzone.html'
-            }]
+            // {
+            //     name: 'Form Basic',
+            //     link: 'BasicForm'
+            // }, {
+            //     name: 'Advanced Components',
+            //     link: 'advanced-components'
+            // }, {
+            //     name: 'Form Wizard',
+            //     link: 'form-wizard'
+            // }, {
+            //     name: 'HTML5 Editor',
+            //     link: 'html5-editor'
+            // }, {
+            //     name: 'Form Pickers',
+            //     link: 'form-pickers'
+            // }, {
+            //     name: 'Image Cropper',
+            //     link: 'image-cropper'
+            // }, {
+            //     name: 'Image Dropzone',
+            //     link: 'image-dropzone'
+            // }
+        ]
     },
     {
         name: 'Tables',
@@ -47,15 +40,16 @@ export const DropdwonMenus = [
         subMenus: [
             {
                 name: 'Basic Tables',
-                link: 'basic-table.html'
+                link: 'basic-table'
             }, {
                 name: 'DataTables',
-                link: 'datatable.html'
+                link: 'datatable'
             }]
     },
     {
         name: 'Calendar',
         iconClass: 'dw-calendar1',
+        link: 'calendar',
         subMenus: []
     },
     {
@@ -64,46 +58,46 @@ export const DropdwonMenus = [
         subMenus: [
             {
                 name: 'Buttons',
-                link: 'ui-buttons.html'
+                link: 'ui-buttons'
             }, {
                 name: 'Cards',
-                link: 'ui-cards.html'
+                link: 'ui-cards'
             }, {
                 name: 'Cards Hover',
-                link: 'ui-cards-hover.html'
+                link: 'ui-cards-hover'
             }, {
                 name: 'Modals',
-                link: 'ui-modals.html'
+                link: 'ui-modals'
             }, {
                 name: 'Tabs',
-                link: 'ui-tabs.html'
+                link: 'ui-tabs'
             }, {
                 name: 'Tooltip &amp; Popover',
-                link: 'ui-tooltip-popover.html'
+                link: 'ui-tooltip-popover'
             }, {
                 name: 'Sweet Alert',
-                link: 'ui-sweet-alert.html'
+                link: 'ui-sweet-alert'
             }, {
                 name: 'Notification',
-                link: 'ui-notification.html'
+                link: 'ui-notification'
             }, {
                 name: 'Timeline',
-                link: 'ui-timeline.html'
+                link: 'ui-timeline'
             }, {
                 name: 'Progressbar',
-                link: 'ui-progressbar.html'
+                link: 'ui-progressbar'
             }, {
                 name: 'Typography',
-                link: 'ui-typography.html'
+                link: 'ui-typography'
             }, {
                 name: 'List group',
-                link: 'ui-list-group.html'
+                link: 'ui-list-group'
             }, {
                 name: 'Range slider',
-                link: 'ui-range-slider.html'
+                link: 'ui-range-slider'
             }, {
                 name: 'Carousel',
-                link: 'ui-carousel.html'
+                link: 'ui-carousel'
             }]
     },
 ];

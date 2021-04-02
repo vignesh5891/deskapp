@@ -44,7 +44,7 @@ class Dropdown extends React.Component {
     render() {
         return (
             <div>
-                <a href="#" onClick={this.toggleDropdown}>{this.props.anchorContent}</a>
+                <span onClick={this.toggleDropdown} style={{ cursor: 'pointer' }}>{this.props.anchorContent}</span>
                 <div ref={this.wrapperRef} data-uid={this.uid} className={this.props.ddlClassName && this.props.ddlClassName[this.uid] ? this.props.ddlClassName[this.uid] : ''}>
                     {this.props.ddlClassName && this.props.ddlClassName[this.uid] ? this.props.dropdownContent : ''}
                 </div>
