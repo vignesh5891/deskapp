@@ -2,9 +2,9 @@ import React from 'react';
 import { connect } from 'react-redux';
 import shortid from 'shortid';
 import { addDropDwonClass, removeDropDwonClass } from '../../actions/Dropdown';
-import './Dropdown.css';;
+import './Drdown.css';;
 
-class Dropdown extends React.Component {
+class Drdown extends React.Component {
     constructor(props) {
         super(props);
 
@@ -68,5 +68,5 @@ const mapDispatchToProps = (dispatch) => {
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(Dropdown);
+)(Drdown);
 

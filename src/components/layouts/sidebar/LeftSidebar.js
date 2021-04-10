@@ -1,5 +1,5 @@
 import React from 'react';
-import Dropdown from '../../ui/Dropdown';
+import Drdown from '../../ui/Drdown';
 import { DropdwonMenus } from '../../../static-data/DropdownMenus';
 import { Link } from "react-router-dom";
 
@@ -57,7 +57,7 @@ class LeftSidebar extends React.Component {
                             {
                                 DropdwonMenus.map((menu, index) => {
                                     return <li className="dropdown" key={index}>
-                                        <Dropdown
+                                        <Drdown
                                             ddlClass='submenu'
                                             anchorContent={this.anchorContent(menu)}
                                             dropdownContent={this.dropdownContent(menu)}

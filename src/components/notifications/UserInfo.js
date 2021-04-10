@@ -1,5 +1,5 @@
 import React from 'react';
-import Dropdown from '../ui/Dropdown';
+import Drdown from '../ui/Drdown';
 
 export default class UserInfo extends React.Component {
     constructor(props) {
@@ -33,7 +33,7 @@ export default class UserInfo extends React.Component {
     render() {
         return (
             <div className="user-info-dropdown" style={{ padding: "20px 10px" }}>
-                <Dropdown
+                <Drdown
                     ddlClass='show-overlap'
                     onOutsideClick="hide"
                     anchorContent={this.anchorContent()}

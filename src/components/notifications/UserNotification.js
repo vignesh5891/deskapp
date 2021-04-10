@@ -1,5 +1,5 @@
 import React from 'react';
-import Dropdown from '../ui/Dropdown';
+import Drdown from '../ui/Drdown';
 import UserNotificationItem from './UserNotificationItem';
 import './UserNotification.css';
 import { UserNotifications } from '../../static-data/UserNotifications';
@@ -39,7 +39,7 @@ export default class UserNotification extends React.Component {
     render() {
         return (
             <div className="user-notification">
-                <Dropdown
+                <Drdown
                     ddlClass='show-overlap'
                     onOutsideClick="hide"
                     anchorContent={this.anchorContent()}
