@@ -35,16 +35,18 @@ export const DropdwonMenus = [
         ]
     },
     {
-        name: 'Tables',
+        name: 'Data Table',
         iconClass: 'dw-library',
+        link: 'data-table-sample',
         subMenus: [
-            {
-                name: 'Basic Tables',
-                link: 'basic-table'
-            }, {
-                name: 'DataTables',
-                link: 'datatable'
-            }]
+            // {
+            //     name: 'Basic Tables',
+            //     link: 'basic-table'
+            // }, {
+            //     name: 'DataTables',
+            //     link: 'datatable'
+            // }
+        ]
     },
     {
         name: 'Calendar',

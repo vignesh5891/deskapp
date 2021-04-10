@@ -3,29 +3,35 @@ import { Field, reduxForm } from 'redux-form';
 import FormGroup from '../ui/FormGroup';
 
 class BasicForm extends React.Component {
-
     constructor(props) {
         super(props)
-        this.submit = this.submit.bind(this)
+        this.submitForm = this.submitForm.bind(this)
     }
 
-    submit(values) {
-        console.log(values)
+    submitForm(values) {
+        window.alert('Form submitted successfully')
+    }
+
+    renderField(field) {
+        return (
+            <FormGroup label={field.label}>
+                <input {...field.input} placeholder={field.label} type={field.type} className={field.className} />
+                {field.meta.touched &&
+                    ((field.meta.error && <span className="text-red-50">{field.meta.error}</span>) ||
+                        (field.meta.warning && <span>{field.meta.warning}</span>))}
+            </FormGroup>
+        )
     }
 
     render() {
-        const { handleSubmit } = this.props
+        const { error, handleSubmit, pristine, reset, submitting } = this.props;
         return (
             <div className="row">
-                <div className="card-box col-xl-8 pd-20 height-100-p mb-30">
-                    <form onSubmit={handleSubmit(this.submit)}>
-                        <FormGroup label="Name">
-                            <Field name="name" component="input" type="text" placeholder="Name" className="form-control" />
-                        </FormGroup>
+                <div className="card-box col-xl-8 offset-2 pd-20 height-100-p mb-30">
+                    <form onSubmit={handleSubmit(this.submitForm)}>
+                        <Field name="name" component={this.renderField} type="text" label="Name" className="form-control" />
 
-                        <FormGroup label="Email">
-                            <Field name="email" component="input" type="email" placeholder="Email" className="form-control" />
-                        </FormGroup>
+                        <Field name="email" component={this.renderField} type="email" label="Email" className="form-control" />
 
                         <FormGroup label="Gender">
                             <label><Field name="gender" component="input" type="radio" value="male" /> Male &nbsp;</label>
@@ -40,31 +46,38 @@ class BasicForm extends React.Component {
                             </Field>
                         </FormGroup>
 
-                        <FormGroup label="Employed?">
-                            <Field name="employed" component="input" type="checkbox" />
-                        </FormGroup>
+                        <Field name="employed" component={this.renderField} type="checkbox" label="Employed?" />
 
                         <FormGroup label="Notes">
                             <Field name="notes" component="textarea" className="form-control" />
                         </FormGroup>
 
                         <FormGroup >
-                            <button type="button" className="btn btn-success">Submit</button>
+                            <button type="submit" className="btn btn-success">Submit</button>
                             <button type="button" className="btn btn-danger margin-5">Cancel</button>
                         </FormGroup>
                     </form>
                 </div >
-                <div className="col-xl-4 height-100-p">
-                    <div className="bg-light-blue border-radius-10 text-center pd-20">
-                        {"{ }"}
-                    </div>
-                </div>
             </div>
         )
     }
 }
 
+function validation(values) {
+    const errors = {}
+    if (!values.name) {
+        errors.name = "Required"
+    }
+    if (!values.email) {
+        errors.email = 'Required'
+    } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
+        errors.email = 'Invalid email address'
+    }
+    return errors
+}
+
 export default reduxForm({
     form: 'simple',
+    validate: validation,
 
 })(BasicForm)

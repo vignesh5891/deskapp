@@ -7,6 +7,7 @@ import LeftSidebar from './LeftSidebar';
 import RightSidebar from './RightSidebar';
 import Dashboard from '../Dashboard';
 import BasicForm from '../../forms/BasicForm';
+import DataTableSample from '../../DataTableSample';
 import Footer from '../Footer';
 
 class LayoutOne extends React.Component {
@@ -24,6 +25,7 @@ class LayoutOne extends React.Component {
                     <div className="pd-ltr-20">
                         <Switch>
                             <Route path="/basic-form" component={BasicForm} />
+                            <Route path="/data-table-sample" component={DataTableSample} />
                             <Route path="/" component={Dashboard} />
                         </Switch>
                         <Footer />

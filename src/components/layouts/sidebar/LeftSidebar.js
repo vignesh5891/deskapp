@@ -61,6 +61,7 @@ class LeftSidebar extends React.Component {
                                             ddlClass='submenu'
                                             anchorContent={this.anchorContent(menu)}
                                             dropdownContent={this.dropdownContent(menu)}
+                                            uni='lmenu'
                                         />
                                     </li>
                                 })

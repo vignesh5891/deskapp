@@ -1,8 +1,8 @@
 import React from 'react';
-import DataTableRows from './DataTableRows';
-import DataTableHead from './DataTableHead';
+import TableRows from './TableRows';
+import TableHead from './TableHead';
 
-class DataTable extends React.Component {
+class SimpleTable extends React.Component {
     constructor(props) {
         super(props);
 
@@ -16,14 +16,14 @@ class DataTable extends React.Component {
             <table className="data-table table nowrap">
                 <thead>
                     <tr>
-                        <DataTableHead
+                        <TableHead
                             DataHeadings={this.tableHeadings}
                             specialObjs={this.specialObjs}
                         />
                     </tr>
                 </thead>
                 <tbody>
-                    <DataTableRows
+                    <TableRows
                         dataRows={this.listData}
                         specialObjs={this.specialObjs}
                     />
@@ -34,4 +34,4 @@ class DataTable extends React.Component {
 }
 
 
-export default DataTable;
+export default SimpleTable;

@@ -19,7 +19,7 @@ class Dropdown extends React.Component {
     toggleDropdown() {
         if (this.props.ddlClassName === this.props.ddlClass) {
             this.ddlParam[this.uid] = '';
-            this.props.hideDropDown(this.ddlParam)
+            // this.props.hideDropDown(this.ddlParam)
         } else {
             this.ddlParam[this.uid] = this.props.ddlClass;
             this.props.showDropDown(this.ddlParam)
@@ -37,7 +37,7 @@ class Dropdown extends React.Component {
     handleClickOutside(event) {
         if (this.wrapperRef && !this.wrapperRef.current.contains(event.target) && this.props.onOutsideClick === 'hide') {
             this.ddlParam[this.uid] = '';
-            this.props.hideDropDown(this.ddlParam)
+            // this.props.hideDropDown(this.ddlParam)
         }
     }
 

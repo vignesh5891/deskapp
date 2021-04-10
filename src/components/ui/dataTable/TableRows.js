@@ -1,6 +1,6 @@
 import React from 'react';
 
-function DataTableRows(props) {
+export default function TableRows(props) {
     return props.dataRows.map(function (rw, index) {
         return (
             <tr key={index}>{
@@ -28,5 +28,3 @@ function DataTableRows(props) {
         )
     })
 }
-
-export default DataTableRows;

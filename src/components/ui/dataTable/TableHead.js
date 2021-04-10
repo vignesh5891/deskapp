@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function DataTableHead(props) {
+export default function TableHead(props) {
     return props.DataHeadings.map((value, label) => {
         if (Object.keys(props.specialObjs).includes(value)) {
             let specialObj = props.specialObjs[value];

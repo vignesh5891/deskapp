@@ -2,7 +2,7 @@ import React from 'react';
 import WelcomeCard from '../ui/WelcomeCard';
 import ActivityChart from '../charts/ActivityChart';
 import TargetChart from '../charts/TargetChart';
-import DataTable from '../ui/dataTable/DataTable';
+import SimpleTable from '../ui/dataTable/SimpleTable';
 import Footer from './Footer';
 import { listData } from '../../static-data/ProductData';
 
@@ -34,7 +34,7 @@ function Dashboard() {
             <div className="row">
                 <div className="col-xl-12 mb-30">
                     <div className="card-box height-100-p">
-                        <DataTable listData={listData} specialObjs={specialObjs} />
+                        <SimpleTable listData={listData} specialObjs={specialObjs} />
                     </div>
                 </div>
             </div>
