@@ -24,7 +24,7 @@ class BasicForm extends React.Component {
     }
 
     render() {
-        const { error, handleSubmit, pristine, reset, submitting } = this.props;
+        const { handleSubmit } = this.props;
         return (
             <div className="row">
                 <div className="card-box col-xl-8 offset-2 pd-20 height-100-p mb-30">

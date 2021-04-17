@@ -17,9 +17,9 @@ export default function TableRows(props) {
                                     <button className={'btn ' + specialObj.className}>{specialObj.buttonText}</button>
                                 </td>)
                             case 'exclude':
-                                return ''
+                                return null
                             default:
-                                return ''
+                                return null
                         }
                     }
                     return <td key={i}>{rw[key]}</td>

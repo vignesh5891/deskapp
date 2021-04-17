@@ -42,7 +42,7 @@ export default function DataTableSample() {
             title="Product Details"
             columns={columns}
             data={listData}
-            pagination='true'
+            pagination={true}
             defaultSortField='Name'
         />
     )

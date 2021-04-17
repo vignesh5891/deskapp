@@ -3,7 +3,6 @@ import WelcomeCard from '../ui/WelcomeCard';
 import ActivityChart from '../charts/ActivityChart';
 import TargetChart from '../charts/TargetChart';
 import SimpleTable from '../ui/dataTable/SimpleTable';
-import Footer from './Footer';
 import { listData } from '../../static-data/ProductData';
 
 const specialObjs = {

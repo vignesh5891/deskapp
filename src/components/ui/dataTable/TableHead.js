@@ -5,7 +5,7 @@ export default function TableHead(props) {
         if (Object.keys(props.specialObjs).includes(value)) {
             let specialObj = props.specialObjs[value];
             if (specialObj.type === 'exclude') {
-                return '';
+                return null;
             }
         }
         return < th key={value} > {value}</th >

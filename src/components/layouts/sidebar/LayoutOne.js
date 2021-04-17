@@ -4,7 +4,6 @@ import { Switch, Route } from "react-router-dom";
 import { toggleLeftBar } from '../../../actions/LeftMenuVisiblity'
 import Header from './Header';
 import LeftSidebar from './LeftSidebar';
-import RightSidebar from './RightSidebar';
 import Dashboard from '../Dashboard';
 import BasicForm from '../../forms/BasicForm';
 import DataTableSample from '../../DataTableSample';
@@ -19,7 +18,6 @@ class LayoutOne extends React.Component {
                     lbarVisiblity={this.props.lbarVisiblity}
                     toggleLeftBar={this.props.toggleLeftBar}
                 />
-                <RightSidebar />
 
                 <div className="main-container">
                     <div className="pd-ltr-20">
@@ -34,7 +32,6 @@ class LayoutOne extends React.Component {
             </div>
         );
     }
-
 }
 
 const mapStateToProps = state => {

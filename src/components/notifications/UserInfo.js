@@ -22,10 +22,10 @@ export default class UserInfo extends React.Component {
     dropdownContent() {
         return (
             <div>
-                <a href="#" className="dropdown-item" ><i className="dw dw-user1"></i> Profile</a>
-                <a href="#" className="dropdown-item" ><i className="dw dw-settings2"></i> Setting</a>
-                <a href="#" className="dropdown-item" ><i className="dw dw-help"></i> Help</a>
-                <a href="#" className="dropdown-item" ><i className="dw dw-logout"></i> Log Out</a>
+                <a href="no-link" className="dropdown-item" ><i className="dw dw-user1"></i> Profile</a>
+                <a href="no-link" className="dropdown-item" ><i className="dw dw-settings2"></i> Setting</a>
+                <a href="no-link" className="dropdown-item" ><i className="dw dw-help"></i> Help</a>
+                <a href="no-link" className="dropdown-item" ><i className="dw dw-logout"></i> Log Out</a>
             </div>
         )
     }

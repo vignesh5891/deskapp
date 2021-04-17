@@ -55,51 +55,63 @@ export const DropdwonMenus = [
         subMenus: []
     },
     {
-        name: 'Elements',
+        name: 'Dropdown Menu',
         iconClass: 'dw-apartment',
         subMenus: [
             {
-                name: 'Buttons',
-                link: 'ui-buttons'
+                name: 'Sub menu 1',
+                link: 'sub1'
             }, {
-                name: 'Cards',
-                link: 'ui-cards'
-            }, {
-                name: 'Cards Hover',
-                link: 'ui-cards-hover'
-            }, {
-                name: 'Modals',
-                link: 'ui-modals'
-            }, {
-                name: 'Tabs',
-                link: 'ui-tabs'
-            }, {
-                name: 'Tooltip &amp; Popover',
-                link: 'ui-tooltip-popover'
-            }, {
-                name: 'Sweet Alert',
-                link: 'ui-sweet-alert'
-            }, {
-                name: 'Notification',
-                link: 'ui-notification'
-            }, {
-                name: 'Timeline',
-                link: 'ui-timeline'
-            }, {
-                name: 'Progressbar',
-                link: 'ui-progressbar'
-            }, {
-                name: 'Typography',
-                link: 'ui-typography'
-            }, {
-                name: 'List group',
-                link: 'ui-list-group'
-            }, {
-                name: 'Range slider',
-                link: 'ui-range-slider'
-            }, {
-                name: 'Carousel',
-                link: 'ui-carousel'
+                name: 'Sub menu 2',
+                link: 'sub2'
             }]
     },
+    // {
+    //     name: 'Elements',
+    //     iconClass: 'dw-apartment',
+    //     subMenus: [
+    //         {
+    //             name: 'Buttons',
+    //             link: 'ui-buttons'
+    //         }, {
+    //             name: 'Cards',
+    //             link: 'ui-cards'
+    //         }, {
+    //             name: 'Cards Hover',
+    //             link: 'ui-cards-hover'
+    //         }, {
+    //             name: 'Modals',
+    //             link: 'ui-modals'
+    //         }, {
+    //             name: 'Tabs',
+    //             link: 'ui-tabs'
+    //         }, {
+    //             name: 'Tooltip &amp; Popover',
+    //             link: 'ui-tooltip-popover'
+    //         }, {
+    //             name: 'Sweet Alert',
+    //             link: 'ui-sweet-alert'
+    //         }, {
+    //             name: 'Notification',
+    //             link: 'ui-notification'
+    //         }, {
+    //             name: 'Timeline',
+    //             link: 'ui-timeline'
+    //         }, {
+    //             name: 'Progressbar',
+    //             link: 'ui-progressbar'
+    //         }, {
+    //             name: 'Typography',
+    //             link: 'ui-typography'
+    //         }, {
+    //             name: 'List group',
+    //             link: 'ui-list-group'
+    //         }, {
+    //             name: 'Range slider',
+    //             link: 'ui-range-slider'
+    //         }, {
+    //             name: 'Carousel',
+    //             link: 'ui-carousel'
+    //         }]
+    // },
 ];
