@@ -1,5 +1,5 @@
 import { TOGGLE_LEFT_BAR, TOGGLE_SUB_MENU } from './types';
-export function toggleLeftBar(showHide) {
+export function toggleLeftBar() {
     return {
         type: TOGGLE_LEFT_BAR,
     }
