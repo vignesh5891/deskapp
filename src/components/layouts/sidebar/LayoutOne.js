@@ -7,6 +7,7 @@ import LeftSidebar from './LeftSidebar';
 import Dashboard from '../Dashboard';
 import BasicForm from '../../forms/BasicForm';
 import DataTableSample from '../../DataTableSample';
+import { EvtCalendar } from '../../EvtCalendar';
 import Footer from '../Footer';
 
 class LayoutOne extends React.Component {
@@ -24,6 +25,7 @@ class LayoutOne extends React.Component {
                         <Switch>
                             <Route path="/basic-form" component={BasicForm} />
                             <Route path="/data-table-sample" component={DataTableSample} />
+                            <Route path="/evt-calendar" component={EvtCalendar} />
                             <Route path="/" component={Dashboard} />
                         </Switch>
                         <Footer />

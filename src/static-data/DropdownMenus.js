@@ -51,7 +51,7 @@ export const DropdwonMenus = [
     {
         name: 'Calendar',
         iconClass: 'dw-calendar1',
-        link: 'calendar',
+        link: 'evt-calendar',
         subMenus: []
     },
     {
